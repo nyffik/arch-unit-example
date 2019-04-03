@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class MemoryDbSecondaryPort implements StoreSecondaryPort {
+class MemoryDbSecondaryAdapter implements StoreSecondaryPort {
 
     private final List<MemoryEntity> memoryStore = new ArrayList<>();
 

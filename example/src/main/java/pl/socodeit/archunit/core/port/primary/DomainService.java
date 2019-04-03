@@ -7,11 +7,11 @@ import pl.socodeit.archunit.core.port.secondary.StoreSecondaryPort;
 import java.util.Optional;
 
 @RequiredArgsConstructor
-public class DomainService {
+class DomainService {
 
     private final StoreSecondaryPort storeSecondaryPort;
 
-    public void doSomething(String businessId) {
+    void doSomething(String businessId) {
         Optional<DomainDto> dto = storeSecondaryPort.findByBusinessId(businessId);
         dto.ifPresent(this::doAndStore);
     }

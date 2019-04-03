@@ -1,15 +1,16 @@
 package pl.socodeit.archunit.adapter.primary;
 
 import lombok.RequiredArgsConstructor;
-import pl.socodeit.archunit.core.port.primary.DomainService;
+import pl.socodeit.archunit.core.port.primary.DomainServiceFacade;
 
 @RequiredArgsConstructor
+@MyControllerAnnotation
 class RestController {
 
-    private final DomainService domainService;
+    private final DomainServiceFacade domainServiceFacade;
 
     void restCall(SomeRequest request) {
-        domainService.doSomething(request.getId());
+        domainServiceFacade.doSomething(request.getId());
     }
 
 }
